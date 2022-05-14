@@ -1,0 +1,37 @@
+{
+//==================== Necessary Elements ========================
+  "manifest_version": 3,                    //manifest version
+  "name": "CryptoCop",        //extension name
+  "version": "0.1",                         //extension version
+
+
+//================== Optional Elements ===========================
+  "description": "Detect browser based
+                  cryptojacking.", //description
+  "icons": {                                //extention icons to be displayed
+    "16": "/images/cryptoCop16.png",
+    "32": "/images/cryptoCop32.png",
+    "48": "/images/cryptoCop48.png",
+    "128": "/images/cryptoCop128.png"
+  },
+
+  "action":{
+    "default_popup":"popup.html",
+    "default_icon":{
+      "16":"/images/cryptoCop16.png",
+      "32":"/images/cryptoCop32.png",
+      "48":"/images/cryptoCop48.png",
+      "128":"/images/cryptoCop128.png"
+    }
+  },
+  "background":{
+    "service_worker":"background.js"
+  },
+  "content_scripts":[
+    {
+        "matches":["<all_urls>"],
+        "js":["Blocker.js"]
+    }
+  ],
+  "permissions":["storage", "activeTab", "scripting", "tabs", "alarms"]
+}
