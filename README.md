@@ -15,3 +15,7 @@ Extract the features that were necessary for the inputting of the ML model // no
 Blacklist.txt has websites that are cryptojacked malicious sites, the plugin just is right now a
 Adblocker that will be shown as a prototype.
 
+Notice:
+--------
+The directory address for imorting in is not changed and is local to developer you can change the directory according to the location.
+
